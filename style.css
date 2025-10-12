@@ -133,7 +133,11 @@ strong {
   display: flex;
 }
 
-#icons > i {
+.icons > a {
+  text-decoration: none;
+}
+
+#icons > a > i{
   margin: 10px;
   font-size: 30px;
   color: white;
@@ -174,17 +178,25 @@ strong {
   text-align: justify;
   margin: auto;
   width: 100vw;
-  animation: showhide 0.4s ease-out;
+  animation: show 0.4s ease-out;
 }
 
-@keyframes showhide {
+@keyframes show {
   0% {
     transform: translateY(-20%);
   }
 }
 
+
 .projects.off {
   display: none;
+   animation: hide 0.4s ease-out;
+}
+
+@keyframes hide {
+  0% {
+    transform: translateY(20%);
+  }
 }
 
 .btn {
@@ -206,43 +218,87 @@ strong {
 }
 
 .projects > .btn > a > button {
-  background-color: rgb(25, 173, 25);
+  background-color:aqua;
   padding: 7px;
   color: rgb(0, 0, 0);
   border-radius: 5px;
   font-size: 20px;
 }
 
-#first {
+/*-----------------------------------*/
+#one {
   background-image: url("img/Screenshot\ 2025-10-12\ 012154.png");
   background-size: cover;
   background-position: center;
 }
 
-#second {
+#two {
   background-image: url("img/Screenshot\ 2025-10-12\ 012134.png");
   background-size: cover;
   background-position: center;
 }
 
-#third {
+#three {
   background-image: url("img/Screenshot\ 2025-10-12\ 012123.png");
   background-size: cover;
   background-position: center;
 }
 
+#four {
+  background-image: url("img/Screenshot\ 2025-10-12\ 030306.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#five {
+  background-image: url("img/Screenshot\ 2025-10-12\ 030152.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#six {
+  background-image: url("img/Screenshot\ 2025-10-12\ 030433.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#seven {
+  background-image: url("img/Screenshot\ 2025-10-12\ 030044.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#eigth {
+  background-image: url("img/Screenshot\ 2025-10-12\ 030558.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#nine {
+  background-image: url("img/Screenshot\ 2025-10-12\ 030629.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/*---------------*/
+
 .buttons > a > button {
-  background-color: rgb(25, 173, 25);
+  background-color: aqua;
   padding: 7px;
   color: rgb(0, 0, 0);
   border-radius: 5px;
   font-size: 20px;
   margin: 0px 200px;
   cursor: pointer;
+
+}
+
+button{ 
+  cursor: pointer;
 }
 
 #showhide {
-  background-color: rgb(25, 173, 25);
+  background-color:aqua;
   padding: 7px;
   color: rgb(0, 0, 0);
   border-radius: 5px;
@@ -251,6 +307,6 @@ strong {
   cursor: pointer;
   margin: auto;
   margin-top: 50px;
-  margin-bottom: 50px;
+ 
  
 }
