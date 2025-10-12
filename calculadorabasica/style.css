@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+body{
+    background-color: cornflowerblue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    background-color: indigo;
+    padding: 30px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 2px 3px 1px;
+    width: 70%;
+    height: fit-content;
+}
+
+
+
+.visao{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+     border-radius: 10px;
+    box-shadow: 2px 3px 1px;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.escrita{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.numero{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+     box-shadow: 2px 3px 1px;
+     font-size: 29px;
+    
+}
+
+.numero:active{
+    transform: scale(110%);
+}
+
+
+p#texto{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+
+@keyframes btn {
+    0%{ transform: scale(100%);}
+    50%{transform: scale(120%);}
+    100%{transform: scale(100%);}
+    
+}
+
+div#sinal {
+    background-color:rgba(1, 14, 255, 0.862);
+    color: white;
+    box-shadow: 2px 3px 1px black;
+}
+
+div#limpar{
+    background-color: red;
+    color: white;
+   box-shadow: 2px 3px 1px black;
+}
+
+div#res{
+    background-color: rgb(75, 255, 47);
+    color: rgb(0, 0, 0);
+   box-shadow: 2px 3px 1px black;
+}

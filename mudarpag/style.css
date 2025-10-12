@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: none;
+  width: 90vw;
+  height: 90vh;
+  margin-top: 30px;
+  font-size: 100px;
+  border-radius: 50px;
+}
+
+.container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.container > p#txt {
+  animation: active 0.75s ease;
+}
+
+@keyframes active {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.container > p#nr {
+  animation: number 0.75s ease;
+}
+
+@keyframes number {
+  0% {
+    opacity: 0;
+  }
+}
+
+#first {
+  background-color: red;
+}
+
+#second {
+  background-color: green;
+}
+
+#third {
+  background-color: blue;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  padding: 6px;
+  margin: 10px;
+}

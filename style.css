@@ -150,41 +150,107 @@ strong {
   justify-content: center;
   width: 600px;
   text-align: justify;
-  margin:auto;
+  margin: auto;
   margin-bottom: 30px;
 }
 
-#secondicons{
+#secondicons {
   font-size: 100px;
   margin: 20px;
- }
+}
 
- #secondicons > i {
+#secondicons > i {
   filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.377));
- }
+}
 
- 
-.projects{
- display: flex;
+.projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
   font-size: 20px;
   align-items: center;
   justify-content: center;
   width: 600px;
   text-align: justify;
-  margin:auto;
+  margin: auto;
   width: 100vw;
+  animation: showhide 0.4s ease-out;
 }
 
-.content{
+@keyframes showhide {
+  0% {
+    transform: translateY(-20%);
+  }
+}
+
+.projects.off {
+  display: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
   margin: 20px;
   width: 400px;
   height: 300px;
   background-color: white;
   border-radius: 20px;
+  border: aqua 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-iframe{
-  width: 400px;
-  height: 300px;
+.projects > .btn > a > button {
+  background-color: rgb(25, 173, 25);
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 20px;
 }
 
+#first {
+  background-image: url("img/Screenshot\ 2025-10-12\ 012154.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#second {
+  background-image: url("img/Screenshot\ 2025-10-12\ 012134.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#third {
+  background-image: url("img/Screenshot\ 2025-10-12\ 012123.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.buttons > a > button {
+  background-color: rgb(25, 173, 25);
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 0px 200px;
+  cursor: pointer;
+}
+
+#showhide {
+  background-color: rgb(25, 173, 25);
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 20px;
+  width: 100px;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+ 
+}

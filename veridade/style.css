@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body{
+    background-color: cornflowerblue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    background-color: white;
+    padding: 30px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 2px 3px 1px;
+    width: 70%;
+    height: fit-content;
+}
+
+input#ver{
+    margin-top: 20px;
+    background-color: chartreuse;
+    border-radius: 3px;
+     box-shadow: 0.5px 0.5px 0.5px;
+    
+}
+
+div#tudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    height: 70%;
+    padding: 0;
+    margin: 0;
+   display: none;
+}
+
+
+
+div#tudo > p{
+    margin: 0;
+}
+
+div#cor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    font-size: 40px;
+    
+    
+}
+

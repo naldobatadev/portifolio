@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+
+    <div class="container">
+      <div class="visao">
+        <p id="texto"></p>
+        
+      </div>
+
+      <div class="escrita">
+        <div class="numero" onclick="um()" id="um">1</div>
+        <div class="numero" onclick="dois()">2</div>
+        <div class="numero" onclick="tres()">3</div>
+        <div class="numero" id="sinal" onclick="mais()">+</div>
+        <div class="numero" onclick="quatro()">4</div>
+        <div class="numero" onclick="cinco()">5</div>
+        <div class="numero" onclick="seis()">6</div>
+        <div class="numero" id="sinal" onclick="menos()">-</div>
+        <div class="numero" onclick="sete()">7</div>
+        <div class="numero" onclick="oito()">8</div>
+        <div class="numero" onclick="nove()">9</div>
+        <div class="numero" id="sinal" onclick="dividir()">/</div>
+        <div class="numero" onclick="limpar()" id="limpar">C</div>
+        <div class="numero" onclick="zero()">0</div>
+        
+        <div class="numero" id="res" onclick="resultado()">=</div>
+
+        <div class="numero" id="sinal" onclick="vezes()">X</div>
+      </div>
+    </div>
+
+    <p>Naldo Bata</p>
+    <script src="script.js"></script>
+  </body>
+</html>

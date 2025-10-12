@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{background-color: aqua;}
+    </style>
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <input type="number" name="" id="numero1">
+    <input type="number" name="" id="numero2">
+
+    <p>
+        <input type="button" value="Somar" id="s" onclick="clicar()">
+        <input type="button" value="Subtrair">
+        <input type="button" value="Multiplicar">
+        <input type="button" value="Dividir">
+    </p>
+
+    <div id="pussy"></div>
+
+  <script>
+   
+
+    function clicar(){
+         var tn1 = window.document.getElementById('numero1')
+    var tn2 = window.document.getElementById('numero2')
+    var res = window.document.getElementById('pussy')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var soma = n1 + n2
+       res.innerHTML = soma
+    }
+
+   
+
+    
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>
