@@ -65,6 +65,7 @@ ul > li {
   text-decoration: none;
   font-size: 20px;
   position: relative;
+  cursor: pointer;
 }
 
 ul > li::after {
@@ -104,7 +105,7 @@ main {
   border-radius: 100%;
   filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
   margin-left: 40px;
-  animation: img 0.8s ease;
+  animation: img 1.2s ease;
 }
 
 @keyframes img {
@@ -119,7 +120,7 @@ main {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  animation: txt 0.8s ease;
+  animation: txt 1.2s ease;
 }
 
 @keyframes txt {
@@ -145,7 +146,7 @@ strong {
 
 .icons {
   display: flex;
-  animation: icons 0.8s ease;
+  animation: icons 1.2s ease;
 }
 
 @keyframes icons {
@@ -165,23 +166,39 @@ strong {
   background-color: rgba(0, 255, 255, 0.11);
   border-radius: 10px;
   padding: 6px;
-  animation: icons 0.8s ease;
+  animation: icons 1.2s ease;
 }
 
 .about {
-  display: flex;
+  width: 100vh;
+  display: grid;
+  grid-template-columns: 100vh 100vh;
+  grid-template-rows: auto auto;
   font-size: 20px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.about > div#sobremim {
   width: 600px;
-  text-align: justify;
   margin: auto;
-  margin-bottom: 30px;
+}
+
+.about > div#sobremim > p {
+  text-align: justify;
+}
+
+#snd {
+  font-size: 30px;
+  color: aqua;
+  filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
+  text-decoration: underline;
 }
 
 #secondicons {
+  display: flex;
+  justify-content: center;
   font-size: 100px;
+  align-items: center;
   margin: 20px;
 }
 
@@ -189,86 +206,7 @@ strong {
   filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.377));
 }
 
-.projects {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-  font-size: 20px;
-  align-items: center;
-  justify-content: center;
-  width: 600px;
-  text-align: justify;
-  margin: auto;
-  width: 100vw;
-  animation: show 0.4s ease-out;
-}
-
-.projectson {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto auto;
-  font-size: 20px;
-  align-items: center;
-  justify-content: center;
-  width: 600px;
-  text-align: justify;
-  margin: auto;
-  width: 100vw;
-  animation: show 0.4s ease-out;
-}
-
-@keyframes show {
-  0% {
-    transform: translateY(-20%);
-  }
-}
-
-.projectson.off {
-  display: none;
-  animation: hide 0.4s ease-out;
-}
-
-@keyframes hide {
-  0% {
-    transform: translateY(20%);
-  }
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
-  margin: 20px;
-  width: 400px;
-  height: 300px;
-  background-color: white;
-  border-radius: 20px;
-  border: aqua 2px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.projects > .btn > a > button {
-  background-color: aqua;
-  padding: 7px;
-  color: rgb(0, 0, 0);
-  border-radius: 5px;
-  font-size: 20px;
-}
-
-.projectson > .btn > a > button {
-  background-color: aqua;
-  padding: 7px;
-  color: rgb(0, 0, 0);
-  border-radius: 5px;
-  font-size: 20px;
-}
-
-/*-----------------------------------*/
+/*----------CONTAINER-----------*/
 #one {
   background-image: url("img/Screenshot\ 2025-10-12\ 012154.png");
   background-size: cover;
@@ -323,7 +261,165 @@ strong {
   background-position: center;
 }
 
-/*---------------*/
+/*------CONTAINER---------*/
+
+.pcontainer {
+  width: 100vw;
+  display: none;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: start;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+.pcontainer.on {
+  display: grid;
+}
+
+.ppic {
+  width: 650px;
+  height: 400px;
+  margin-left: 50px;
+  border: 2px solid aqua;
+  animation: ppic 1.2s ease;
+  z-index: 5;
+  border-radius: 20px;
+}
+@keyframes ppic {
+  0% {
+    transform: translateX(-100%);
+  }
+}
+
+.ppic.on {
+  width: 650px;
+  height: 400px;
+  margin-left: 50px;
+  border: 2px solid aqua;
+  animation: ppicon 1.2s ease;
+  z-index: 5;
+  border-radius: 20px;
+}
+
+@keyframes ppicon {
+  0% {
+    transform: translateX(100%);
+  }
+}
+
+.ptxt {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: justify;
+  padding-left: 100px;
+  width: 600px;
+}
+
+.ptxt > h2 {
+  font-size: 30px;
+  color: aqua;
+  padding-bottom: 60px;
+  filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
+  animation: h2 1.2s ease;
+}
+
+@keyframes h2 {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+
+.ptxt > p {
+  transform: translateY(-40px);
+  font-size: 20px;
+  animation: p 1.2s ease;
+}
+
+@keyframes p {
+  0% {
+    transform: translateX(100%);
+  }
+}
+
+.ptxt > p.on {
+  transform: translateY(-40px);
+  font-size: 20px;
+  animation: pon 1.2s ease;
+}
+
+@keyframes pon {
+  0% {
+    transform: translateX(-100%);
+  }
+}
+
+.ptxt > a > button {
+  background-color: rgba(0, 255, 38, 0.992);
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  border-radius: 50px;
+  font-size: 20px;
+  width: 100px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  animation: btn 1.2s ease;
+}
+
+@keyframes btn {
+  0% {
+    transform: translateY(200%);
+  }
+}
+
+#contador {
+  font-size: 30px;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.46));
+}
+
+.movbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#showhide {
+  background-color: rgba(0, 255, 255, 0.81);
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 20px;
+  width: 100px;
+  cursor: pointer;
+  margin: 50px;
+}
+
+#prev,
+#next {
+  background-color: rgba(0, 255, 255, 0.11);
+  filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
+  padding: 7px;
+  color: rgb(255, 255, 255);
+  border-radius: 50px;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: all 0.5s;
+}
 
 .buttons > a > button {
   background-color: aqua;
@@ -339,20 +435,7 @@ button {
   cursor: pointer;
 }
 
-#showhide {
-  background-color: aqua;
-  padding: 7px;
-  color: rgb(0, 0, 0);
-  border-radius: 5px;
-  font-size: 20px;
-  width: 100px;
-  cursor: pointer;
-  margin: auto;
-  margin-top: 50px;
-}
-
-
-footer{
+footer {
   width: 100vw;
   height: 40px;
   margin-top: 20px;
@@ -363,12 +446,14 @@ footer{
   align-items: center;
   font-size: 20px;
   font-weight: 500px;
+  font-family: "Inter", sans-serif;
 }
 
-footer::before{
-  content: "© ";
+footer::before {
+  content: "©";
 }
 
-footer > strong {
+footer > p > strong {
   color: blue;
+  
 }
