@@ -66,6 +66,7 @@ ul > li {
   font-size: 20px;
   position: relative;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 ul > li::after {
@@ -77,6 +78,7 @@ ul > li::after {
   top: 100%;
   left: 0%;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 ul > li:hover::after {
