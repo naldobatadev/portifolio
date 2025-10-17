@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  overflow-x: hidden;
   text-align: center;
 }
 
@@ -23,7 +23,7 @@ header {
   justify-content: space-between;
 }
 
-#btnmenu{
+#btnmenu {
   display: none;
 }
 
@@ -291,17 +291,17 @@ strong {
   display: grid;
 }
 
- .pcontainermobile {
-    width: 95vw;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.pcontainermobile {
+  width: 95vw;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .pcontainermobile.on {
-    display: none;
-  }
+.pcontainermobile.on {
+  display: none;
+}
 
 .ppic {
   width: 650px;
@@ -418,8 +418,7 @@ strong {
 
 .movbtnmobile {
   display: none;
- }
-
+}
 
 #showhide {
   background-color: rgba(0, 255, 255, 0.81);
@@ -535,10 +534,10 @@ footer > p > strong {
 /*--------------MOBILE---------------*/
 
 @media (max-width: 767px) {
-  #btnmenu{
-  display:flex;
-}
-  
+  #btnmenu {
+    display: flex;
+  }
+
   nav {
     display: none;
   }
@@ -676,8 +675,8 @@ footer > p > strong {
     display: flex;
   }
 
-/**/
- .pcontainer {
+  /**/
+  .pcontainer {
     width: 95vw;
     display: none;
     flex-direction: column;
@@ -688,7 +687,7 @@ footer > p > strong {
   .pcontainer.on {
     display: none;
   }
-/**/
+  /**/
   .pcontainermobile {
     width: 95vw;
     display: none;
@@ -701,16 +700,21 @@ footer > p > strong {
     display: flex;
   }
 
-
   .ppic.on {
     width: 60%;
     height: 500px;
     border: 2px solid aqua;
-    animation: ppicon 1.2s ease;
+    animation: ppicomobile 1.2s ease;
     z-index: 5;
     border-radius: 20px;
     margin: 0;
   }
+
+  @keyframes ppicmobile {
+  0% {
+    transform: translateX(-100%);
+  }
+}
   /*-----------------------------------------*/
   #one {
     background-image: url("img/onemob.png");
@@ -718,12 +722,11 @@ footer > p > strong {
     background-position: center;
   }
 
-  
-#two {
-  background-image: url("img/twomob.png");
-  background-size: cover;
-  background-position: center;
-}
+  #two {
+    background-image: url("img/twomob.png");
+    background-size: cover;
+    background-position: center;
+  }
   /*-----------------------------------------*/
 
   .ptxt {
@@ -746,43 +749,42 @@ footer > p > strong {
   }
 
   #contador {
-  font-size: 30px;
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.46));
-  margin-top: 20px;
-}
+    font-size: 30px;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.46));
+    margin-top: 20px;
+  }
 
   .movbtn {
-  display: none;
-}
+    display: none;
+  }
 
-.movbtnmobile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-}
+  .movbtnmobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
 
-#prevmobile,
-#nextmobile {
-  background-color: rgba(0, 255, 255, 0.11);
-  filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
-  padding: 7px;
-  color: rgb(255, 255, 255);
-  border-radius: 50px;
-  font-size: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-family: "Inter", sans-serif;
-  transition: all 0.5s;
+  #prevmobile,
+  #nextmobile {
+    background-color: rgba(0, 255, 255, 0.11);
+    filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
+    padding: 7px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition: all 0.5s;
+  }
 }
-}
-
