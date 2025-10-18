@@ -106,8 +106,8 @@ main {
 .img {
   background-image: url("img/perfil.jpg");
   background-size: cover;
-  height: 400px;
   width: 400px;
+  aspect-ratio: 1 / 1;
   border-radius: 100%;
   filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
   margin-left: 40px;
@@ -531,6 +531,9 @@ footer > p > strong {
   justify-content: flex-start;
 }
 
+#mobileum {
+  display: none;
+}
 /*--------------MOBILE---------------*/
 
 @media (max-width: 767px) {
@@ -585,7 +588,7 @@ footer > p > strong {
   main > .img {
     margin: 20px auto;
     width: 70%;
-    height: 70%;
+    aspect-ratio: 1 / 1;
   }
 
   main > .text {
@@ -638,7 +641,7 @@ footer > p > strong {
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     text-align: justify;
   }
 
@@ -700,6 +703,22 @@ footer > p > strong {
     display: flex;
   }
 
+  .ppic {
+    width: 60%;
+    height: 500px;
+    border: 2px solid aqua;
+    animation: ppic 1.2s ease;
+    z-index: 5;
+    border-radius: 20px;
+    margin: 0;
+  }
+
+  @keyframes ppic {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+
   .ppic.on {
     width: 60%;
     height: 500px;
@@ -711,13 +730,11 @@ footer > p > strong {
   }
 
   @keyframes ppicon {
-  0% {
-    transform: translateX(-100%);
+    0% {
+      transform: translateX(100%);
+    }
   }
-}
 
-
-  
   /*-----------------------------------------*/
   #one {
     background-image: url("img/onemob.png");
@@ -749,6 +766,32 @@ footer > p > strong {
     filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
     animation: h2 1.2s ease;
     padding-bottom: 30px;
+  }
+
+  @keyframes h2 {
+    0% {
+      transform: translateY(-90%);
+      opacity: 0;
+    }
+  }
+
+  .ptxt > a > button {
+    background-color: rgba(0, 255, 38, 0.992);
+    padding: 7px;
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    font-size: 20px;
+    width: 100px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    animation: btn 1.2s ease;
+  }
+
+  @keyframes btn {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
   }
 
   #contador {
@@ -789,5 +832,51 @@ footer > p > strong {
     cursor: pointer;
     font-family: "Inter", sans-serif;
     transition: all 0.5s;
+  }
+
+  #prevmobileum {
+    background-color: rgba(0, 255, 255, 0.11);
+    filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
+    padding: 7px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition: all 0.5s;
+
+    transform: translateY(600%);
+    margin-left: 20px;
+  }
+
+  #nextmobileum {
+    background-color: rgba(0, 255, 255, 0.11);
+    filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
+    padding: 7px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition: all 0.5s;
+    transform: translateY(600%);
+    margin-right: 20px;
+  }
+
+  #mobileum {
+    display: flex;
+    justify-content: space-between;
   }
 }
