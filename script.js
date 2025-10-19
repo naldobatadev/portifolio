@@ -177,3 +177,6 @@ prevmobile.addEventListener("click", function () {
   } / 0${pcontainermobileLength}`;
 });
 
+
+////////////////////////////////////////////////
+
