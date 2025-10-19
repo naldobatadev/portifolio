@@ -572,7 +572,7 @@ footer::before {
 }
 
 footer > p > strong {
-  color: blue;
+  color: rgb(0, 0, 0);
 }
 
 .menu {
