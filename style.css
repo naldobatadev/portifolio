@@ -8,7 +8,7 @@
 body {
   background-color: #0f0f1e;
   color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Roboto Slab", serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,14 +32,12 @@ header > div {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Protest Guerrilla", sans-serif;
   font-weight: 300;
- 
 }
 
 header > div > strong {
-  font-family: "Barlow Condensed", sans-serif;
-  
+  font-family: "Roboto Slab", serif;
 }
 
 header > div > img {
@@ -54,7 +52,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding-right: 30px;
-   font-family: "Barlow Condensed", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -130,6 +128,8 @@ main {
   display: flex;
   flex-direction: column;
   font-family: "Inter", sans-serif;
+  font-weight: bolder;
+
   font-optical-sizing: auto;
   font-style: normal;
   animation: txt 1.2s ease;
@@ -159,6 +159,7 @@ main {
 
 strong {
   color: aqua;
+  font-family: "Protest Guerrilla", sans-serif;
 }
 
 .icons {
@@ -215,6 +216,7 @@ strong {
 }
 
 #snd {
+  font-family: "Roboto Slab", serif;
   font-size: 30px;
   color: aqua;
   filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
@@ -404,7 +406,7 @@ strong {
   font-size: 20px;
   width: 100px;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto Slab", serif;
   animation: btn 1.2s ease;
 }
 
@@ -442,6 +444,7 @@ strong {
   width: 100px;
   cursor: pointer;
   margin: 50px;
+  font-family: "Roboto Slab", serif;
 }
 
 #prev,
@@ -485,7 +488,7 @@ button {
   flex-direction: column;
   margin-top: 70px;
   width: 100vw;
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -500,35 +503,35 @@ button {
 .services > .iconsservices > .container {
   width: 250px;
   height: 200px;
-  margin:10px 40px 10px 40px;
-  background-color:transparent;
+  margin: 10px 40px 10px 40px;
+  background-color: transparent;
   border-radius: 0px 30px 0px 30px;
   animation: container 1s ease;
- display: grid;
- grid-template-rows: 80% 20%;
- justify-content: center;
- align-items: center;
+  display: grid;
+  grid-template-rows: 80% 20%;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes container {
-  0%{opacity: 0;}
-
+  0% {
+    opacity: 0;
+  }
 }
 
 .services > .iconsservices > .container > div {
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
 
 .services > .iconsservices > .container > div > span {
   font-size: 60px;
-    filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.377));
+  filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.377));
 }
 
 .services > .iconsservices > .container > div > p {
- font-family: "Inter", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 20px;
   color: aqua;
   font-weight: 700;
@@ -538,19 +541,19 @@ button {
   width: 900px;
   margin: 10px;
   line-height: 1.5;
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 18px;
 }
 
-.services > button{
+.services > button {
   padding: 10px;
   font-size: 20px;
-  background-color:rgb(5, 233, 5);
-  color:black;
+  background-color: rgb(5, 233, 5);
+  color: black;
   border-radius: 20px;
-   filter: drop-shadow(3px 3px 9px rgba(9, 255, 0, 0.373));
-   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-   margin: 50px;
+  filter: drop-shadow(3px 3px 9px rgba(9, 255, 0, 0.373));
+  font-family: "Roboto Slab", serif;
+  margin: 50px;
 }
 
 footer {
@@ -564,7 +567,7 @@ footer {
   align-items: center;
   font-size: 20px;
   font-weight: 500px;
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 
 footer::before {
