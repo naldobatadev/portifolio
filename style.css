@@ -31,6 +31,7 @@ header > div {
   font-size: 20px;
   font-family: "Protest Guerrilla", sans-serif;
   font-weight: 300;
+  padding-left: 3px;
 }
 
 header > div > strong {
@@ -39,7 +40,6 @@ header > div > strong {
 
 header > div > img {
   margin: 10px;
-  margin-left: 20px;
   width: 50px;
   height: 50px;
 }
@@ -108,7 +108,7 @@ ul > li:hover::after {
   border-radius: 100%;
   z-index: -10;
   animation: circle1 1s ease;
-}
+ }
 
 @keyframes circle1 {
   0% {
@@ -126,7 +126,7 @@ ul > li:hover::after {
   position: absolute;
   border-radius: 100%;
   z-index: -10;
-  animation: circle2 1s ease;
+  animation: circle2 1s ease; 
 }
 
 @keyframes circle2 {
@@ -362,6 +362,30 @@ ul > li:hover::after {
   z-index: -100;
 }
 
+.circle19 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(0, 247, 255, 0.2);
+  background-color: transparent;
+  top: 150%;
+  right: 80%;
+  position: absolute;
+  border-radius: 100%;
+  z-index: -100;
+}
+
+.circle20 {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 247, 255, 0.2);
+  background-color: transparent;
+  top: 255%;
+  right: 70%;
+  position: absolute;
+  border-radius: 100%;
+  z-index: -100;
+}
+
 /*------CIRCLES--------*/
 
 main {
@@ -402,6 +426,7 @@ main {
   animation: main-text 1.2s ease;
   transform: translateY(-10%);
   z-index: 100;
+  
 }
 
 @keyframes main-text {
@@ -413,6 +438,7 @@ main {
 
 .main-text > h2 {
   font-size: 50px;
+  text-shadow: rgba(0, 255, 255, 0.64) 1px 2px 2px;
 }
 
 .main-text > p {
@@ -424,6 +450,7 @@ main {
 strong {
   color: aqua;
   font-family: "Protest Guerrilla", sans-serif;
+ text-shadow: rgba(0, 255, 255, 0.64) 1px 1px 1px;
 }
 
 .icons {
@@ -871,7 +898,8 @@ button {
   font-size: 19px;
 }
 
-.services > button {
+
+.services > a > button {
   padding: 10px;
   font-size: 20px;
   background-color: rgb(5, 233, 5);
