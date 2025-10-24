@@ -13,7 +13,7 @@ function carregar() {
   } / 0${pcontainerLength}`;
 }
 
-next.addEventListener("click", function () {
+function nextcontainer() {
   var pcontainerOn = document.querySelector("div.pcontainer.on");
 
   pcontainerOn.classList.remove("on");
@@ -30,9 +30,9 @@ next.addEventListener("click", function () {
   document.getElementById("contador").innerHTML = `0${
     contador + 1
   } / 0${pcontainerLength}`;
-});
+}
 
-prev.addEventListener("click", function () {
+function prevcontainer() {
   var pcontainerOn = document.querySelector("div.pcontainer.on");
 
   pcontainerOn.classList.remove("on");
@@ -48,8 +48,10 @@ prev.addEventListener("click", function () {
   document.getElementById("contador").innerHTML = `0${
     contador + 1
   } / 0${pcontainerLength}`;
-});
+}
 
+next.addEventListener("click", nextcontainer);
+prev.addEventListener("click", prevcontainer);
 
 
 /////////////////-------ANIMATIONS---////////////////////////////
@@ -65,3 +67,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 elements.forEach((element) => observer.observe(element));
+
+/////////////////-------CLEAN 'A' NAVBAR---////////////////////////////
+
+window.history.replaceState(null, null, window.location.pathname);
