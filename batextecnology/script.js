@@ -4,8 +4,8 @@ var showContainer = document.querySelectorAll("div.content");
 var showPonto = document.querySelectorAll("div.ponto");
 var nr = 0;
 
+function next(){
 
-depois.addEventListener("click", function depois() {
   if (nr == 2) {
     nr = 0;
 
@@ -27,10 +27,14 @@ depois.addEventListener("click", function depois() {
 
   document.getElementById("numero").innerHTML = `0${nr + 1}`;
 
-});
+;
 
 
-antes.addEventListener("click", function antes() {
+}
+
+
+function prev(){
+
   if (nr == 0) {
     nr = 2;
 
@@ -50,5 +54,12 @@ antes.addEventListener("click", function antes() {
 
   document.getElementById("numero").innerHTML = `0${nr + 1}`;
 
-});
+;
 
+}
+
+
+antes.addEventListener("click", prev)
+depois.addEventListener("click", next)
+
+setInterval(next, 4000)
