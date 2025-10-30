@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   height: 8vh;
   display: flex;
   justify-content: space-between;
@@ -394,7 +394,7 @@ ul > a > li:hover::after {
 
 main {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   align-items: center;
   justify-content: space-evenly;
@@ -674,7 +674,7 @@ strong {
 /*------CONTAINER---------*/
 
 .pcontainer {
-  width: 100vw;
+  width: 100%;
   display: none;
   grid-template-columns: auto auto;
   grid-template-rows: auto;
@@ -843,7 +843,7 @@ button {
   align-items: center;
   flex-direction: column;
   margin-top: 70px;
-  width: 100vw;
+  width: 100%;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -851,7 +851,7 @@ button {
 
 .services > .iconsservices {
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -912,8 +912,25 @@ button {
   margin: 50px;
 }
 
+.up {
+  position: fixed;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+  top: 90%;
+  border-radius: 100%;
+  filter: drop-shadow(3px 3px 9px rgba(0, 255, 255, 0.482));
+  background-color: rgba(0, 255, 255, 0.11);
+  color: white;
+  z-index: 500;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
-  width: 100vw;
+  width: 100%;
   height: 40px;
   margin-top: 20px;
   margin-bottom: 0;
@@ -952,12 +969,13 @@ footer > p > strong {
 .projectsmobile {
   display: none;
 }
-
-@media (max-width: 768px) {
-
-ul{
+.iconsservicesmobile{
   display: none;
 }
+@media (max-width: 768px) {
+  ul {
+    display: none;
+  }
 
   #menuiconmobile {
     display: flex;
@@ -971,24 +989,22 @@ ul{
     top: 0;
     z-index: 1000;
     height: 100vh;
-    width: 100vw;
-    background-color:aqua;
+    width: 100%;
+    background-color: aqua;
     transition: 0.5s ease;
     color: black;
     padding-top: 20px;
-
   }
 
-    .ulmobile{
-      display: flex;
-      flex-direction: column
-    }
+  .ulmobile {
+    display: flex;
+    flex-direction: column;
+  }
 
-  .ulmobile > a > li{
+  .ulmobile > a > li {
     color: black;
-
   }
-  
+
   .menumobile.off {
     transform: translateX(-100%);
 
@@ -1381,86 +1397,6 @@ ul{
     display: none;
   }
 
-  /*-----*ANIMATIONS*----*/
-  .hidden {
-    transition: all 1s ease;
-    opacity: 0;
-  }
-
-  .right {
-    transform: translateX(100%);
-    transition: all 1s ease;
-  }
-
-  .left {
-    transform: translateX(-100%);
-    transition: all 1s ease;
-  }
-
-  .leftservices {
-    transform: translateX(-40%);
-  }
-
-  .leftbtn {
-    transform: translateX(-200%);
-  }
-
-  .rightbtn {
-    transform: translateX(200%);
-  }
-
-  .down {
-    transform: translateY(100%);
-    transition: all 1s ease;
-  }
-
-  .downproject {
-    transform: translateY(40%);
-  }
-
-  .downcontador {
-    transform: translateY(50%);
-  }
-
-  .downservices {
-    transform: translateY(50%);
-    transition: all 1s ease;
-  }
-
-  .container:nth-child(1) {
-    opacity: 0;
-    transition-delay: 400ms;
-  }
-
-  .container:nth-child(2) {
-    opacity: 0;
-    transition-delay: 800ms;
-  }
-
-  .container:nth-child(3) {
-    opacity: 0;
-    transition-delay: 1200ms;
-  }
-
-  .container:nth-child(4) {
-    opacity: 0;
-    transition-delay: 1600ms;
-  }
-
-  .container.show {
-    transform: translate(0%, 0%);
-    filter: blur(0px);
-    opacity: 1;
-  }
-
-  .show {
-    transform: translate(0%, 0%);
-    filter: blur(0px);
-    opacity: 1;
-    transition: all 1.7s ease;
-  }
-  /*-----ANIMATIONS----*/
-
   .aboutmobile {
     margin-top: 60px;
     width: 80%;
@@ -1477,6 +1413,7 @@ ul{
   .aboutmobile > div#sobremim > p {
     text-align: justify;
     margin: auto;
+    font-size: 16px;
   }
 
   .pcontainer {
@@ -1530,7 +1467,7 @@ ul{
 
   .ptxt > p {
     text-align: justify;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .ptxt > a > button {
@@ -1546,75 +1483,100 @@ ul{
     margin-bottom: 50px;
   }
 
-
   #contador {
-  display: none;
+    display: none;
   }
 
   .pbtn {
     display: none;
   }
-  
-.services {
+
+  .services {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+    margin: auto;
+    width: 90%;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .services > .hidden.downservices > p {
+    width: 100%;
+    margin: auto;
+    line-height: 1.5;
+    font-family: "Roboto Slab", serif;
+    font-size: 15px;
+  }
+
+  .services > .iconsservices {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services > .iconsservices > .container {
+    width: 180px;
+    height: 180px;
+    background-color: transparent;
+    border-radius: 0px 30px 0px 30px;
+    animation: container 1s ease;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .services > .iconsservices > .container > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .services > .iconsservices > .container > div > span {
+    font-size: 60px;
+    filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.377));
+  }
+
+  .services > .iconsservices > .container > div > p {
+    font-family: "Roboto Slab", serif;
+    font-size: 12px;
+    color: aqua;
+    font-weight: 700;
+  }
+
+  footer {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: rgba(0, 255, 255, 0.856);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500px;
+    font-family: "Roboto Slab", serif;
+  }
+  footer > p {
+    padding: 10px;
+  }
+
+  #icons-skills {
   display: flex;
   justify-content: center;
-  text-align: justify;
+  font-size: 100px;
   align-items: center;
-  flex-direction: column;
-  margin-top: 70px;
-  margin: auto;
-  width: 90%;
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.services > .hidden.downservices > p {
+  margin: 20px;
   width: 100%;
-  margin:auto;
-  line-height: 1.5;
-  font-family: "Roboto Slab", serif;
-  font-size: 15px;
 }
-
-.services > .iconsservices {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  width: 90%;
-  justify-content: center;
-  align-items: center;
-}
-
-.services > .iconsservices > .container {
-  width: 180px;
-  height: 180px;
-  background-color: transparent;
-  border-radius: 0px 30px 0px 30px;
-  animation: container 1s ease;
-  display: grid;
-  grid-template-rows: 80% 20%;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.services > .iconsservices > .container > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.services > .iconsservices > .container > div > span {
-  font-size: 60px;
-  filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.377));
-}
-
-.services > .iconsservices > .container > div > p {
-  font-family: "Roboto Slab", serif;
-  font-size: 20px;
-  color: aqua;
-  font-weight: 700;
-}
-
 }

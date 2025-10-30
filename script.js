@@ -95,8 +95,32 @@ linkmenu[2].addEventListener("click", () => {
   menu.classList.toggle("off");
 });
 
-var removemenu = document.getElementById('removemenu')
+var removemenu = document.getElementById("removemenu");
 
-removemenu.addEventListener('click', ()=> { 
-  menu.classList.toggle('off')
+removemenu.addEventListener("click", () => {
+  menu.classList.toggle("off");
+});
+
+/////////////////-------RETURN TO TOP---////////////////////////////
+var btnreturn = document.getElementById("btnreturn");
+window.onscroll = function () {
+  toupscroll();
+};
+
+function toupscroll() {
+  if (
+    document.body.scrollTop > 900 ||
+    document.documentElement.scrollTop > 900
+  ) {
+    btnreturn.style.display = "flex";
+  } else {
+    btnreturn.style.display = "none";
+  }
+}
+
+btnreturn.addEventListener('click', ()=> {
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  })
 })
