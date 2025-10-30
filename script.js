@@ -53,7 +53,6 @@ function prevcontainer() {
 next.addEventListener("click", nextcontainer);
 prev.addEventListener("click", prevcontainer);
 
-
 /////////////////-------ANIMATIONS---////////////////////////////
 
 const elements = document.querySelectorAll(".hidden");
@@ -71,3 +70,33 @@ elements.forEach((element) => observer.observe(element));
 /////////////////-------CLEAN 'A' NAVBAR---////////////////////////////
 
 window.history.replaceState(null, null, window.location.pathname);
+
+/////////////////-------MENU-MOBILE---////////////////////////////
+
+var btnmenu = document.getElementById("menuiconmobile");
+var menu = document.querySelector(".menumobile");
+
+btnmenu.addEventListener("click", () => {
+  menu.classList.toggle("off");
+});
+
+/////////////////-------REMOVE-MENU-MOBILE---////////////////////////////
+
+var linkmenu = document.querySelectorAll("#linkmobile");
+linkmenu[0].addEventListener("click", () => {
+  menu.classList.toggle("off");
+});
+
+linkmenu[1].addEventListener("click", () => {
+  menu.classList.toggle("off");
+});
+
+linkmenu[2].addEventListener("click", () => {
+  menu.classList.toggle("off");
+});
+
+var removemenu = document.getElementById('removemenu')
+
+removemenu.addEventListener('click', ()=> { 
+  menu.classList.toggle('off')
+})
