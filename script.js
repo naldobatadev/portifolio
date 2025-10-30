@@ -8,9 +8,9 @@ var pcontainerLength = Number(pcontainer.length);
 window.onload = carregar();
 
 function carregar() {
-  document.getElementById("contador").innerHTML = `0${
+  document.getElementById("contador").innerHTML = `${
     contador + 1
-  } / 0${pcontainerLength}`;
+  } / ${pcontainerLength}`;
 }
 
 function nextcontainer() {
@@ -27,9 +27,9 @@ function nextcontainer() {
 
   pcontainer[contador].classList.add("on");
 
-  document.getElementById("contador").innerHTML = `0${
+  document.getElementById("contador").innerHTML = `${
     contador + 1
-  } / 0${pcontainerLength}`;
+  } / ${pcontainerLength}`;
 }
 
 function prevcontainer() {
@@ -45,9 +45,9 @@ function prevcontainer() {
 
   pcontainer[contador].classList.add("on");
 
-  document.getElementById("contador").innerHTML = `0${
+  document.getElementById("contador").innerHTML = `${
     contador + 1
-  } / 0${pcontainerLength}`;
+  } / ${pcontainerLength}`;
 }
 
 next.addEventListener("click", nextcontainer);
