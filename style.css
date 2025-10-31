@@ -1018,9 +1018,9 @@ footer > p > strong {
   main {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 40% 60%;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     justify-items: center;
@@ -1036,7 +1036,7 @@ footer > p > strong {
     animation: main-img 1.2s ease;
     z-index: 100;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 90px;
   }
 
   @keyframes main-img {
@@ -1051,7 +1051,7 @@ footer > p > strong {
   }
 
   .main-textmobile {
-    margin-top: 20px;
+
     width: 90%;
     height: 90%;
     display: flex;
@@ -1270,7 +1270,7 @@ footer > p > strong {
   .services > a > button {
     border: 1px solid black;
   }
-  
+
   footer {
     width: 100%;
     height: 100%;
