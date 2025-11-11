@@ -914,14 +914,14 @@ button {
 
 .up {
   position: fixed;
-  
+
   width: 50px;
   height: 50px;
   right: 20px;
   top: 90%;
   border-radius: 100%;
   filter: drop-shadow(3px 3px 9px rgba(0, 255, 255, 0.214));
-  background-color:aqua;
+  background-color: aqua;
   color: rgb(0, 0, 0);
   z-index: 500;
   display: none;
@@ -973,6 +973,10 @@ footer > p > strong {
 .iconsservicesmobile {
   display: none;
 }
+
+#allprojects {
+  display: none;
+}
 @media (max-width: 768px) {
   ul {
     display: none;
@@ -989,9 +993,9 @@ footer > p > strong {
     position: fixed;
     top: 0;
     z-index: 1000;
-    height: fit-content;
-    width: 100%;
-    background-color: aqua;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(10, 208, 208);
     transition: 0.5s ease;
     color: black;
     padding-top: 20px;
@@ -1007,7 +1011,7 @@ footer > p > strong {
   }
 
   .menumobile.off {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
 
     transition: 0.5s ease;
   }
@@ -1052,7 +1056,6 @@ footer > p > strong {
   }
 
   .main-textmobile {
-
     width: 90%;
     height: 90%;
     display: flex;
@@ -1298,4 +1301,9 @@ footer > p > strong {
     margin: 20px;
     width: 100%;
   }
+
+  .pjhide {
+    display: none;
+  }
+
 }
