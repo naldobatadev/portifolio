@@ -977,6 +977,11 @@ footer > p > strong {
 #allprojects {
   display: none;
 }
+
+p#title{
+  display: none;
+}
+
 @media (max-width: 768px) {
   ul {
     display: none;
@@ -1306,4 +1311,7 @@ footer > p > strong {
     display: none;
   }
 
+p#title{
+  display:block;
+}
 }
