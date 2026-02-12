@@ -903,10 +903,11 @@ button {
 
 .services > a > button {
   padding: 10px;
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 500;
   background-color: rgb(5, 233, 5);
   color: black;
-  border-radius: 20px;
+  border-radius: 5px;
   filter: drop-shadow(3px 3px 9px rgba(9, 255, 0, 0.373));
   font-family: "Roboto Slab", serif;
   margin: 50px;
@@ -978,7 +979,7 @@ footer > p > strong {
   display: none;
 }
 
-p#title{
+p#title {
   display: none;
 }
 
@@ -1147,6 +1148,8 @@ p#title{
   .projectsmobile {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .pcontainermobile > .ptxt > a > button {
@@ -1156,10 +1159,41 @@ p#title{
   .pcontainermobile {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 85%;
     justify-content: center;
     align-items: center;
     justify-items: center;
+    border: 1px solid aqua;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+
+  .pcontainermobilehidden {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  #rm {
+    text-decoration: underline;
+  }
+
+  #readmore {
+    transition: 2s;
+    animation: circle1 1s ease;
+  }
+
+  .read {
+    display: flex;
+  }
+
+  .off {
+    display: none;
+  }
+  .on {
+    display: none;
   }
 
   .ppic {
@@ -1168,7 +1202,8 @@ p#title{
     border: 2px solid aqua;
     z-index: 5;
     border-radius: 20px;
-    margin: 0;
+    margin: 20px 0;
+    padding: 0;
   }
 
   .ptxt {
@@ -1185,7 +1220,7 @@ p#title{
     font-size: 20px;
     color: aqua;
     padding-bottom: 60px;
-    padding-top: 30px;
+    padding-top: 10px;
     filter: drop-shadow(3px 3px 9px rgba(0, 251, 255, 0.601));
   }
 
@@ -1241,7 +1276,7 @@ p#title{
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    width: 90%;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }
@@ -1311,7 +1346,7 @@ p#title{
     display: none;
   }
 
-p#title{
-  display:block;
-}
+  p#title {
+    display: block;
+  }
 }

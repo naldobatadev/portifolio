@@ -118,9 +118,45 @@ function toupscroll() {
   }
 }
 
-btnreturn.addEventListener('click', ()=> {
+btnreturn.addEventListener("click", () => {
   window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  })
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+/////////////////-------HIDDEN-PROJECTS---////////////////////////////
+let hiddenprojects = document.getElementById("hiddenprojects");
+let hiddenp = document.querySelector(".pcontainermobilehidden");
+hcont = 1;
+
+hiddenprojects.addEventListener("click", () => {
+  hiddenp.classList.toggle("on");
+
+  if (hcont % 2 == 0) {
+    document.getElementById("hiddenprojects").innerHTML = "Ver Mais";
+    hcont += 1;
+  } else {
+    document.getElementById("hiddenprojects").innerHTML = "Ver Menos";
+    hcont += 1;
+  }
+});
+
+/////////////////-------READ-MORE---////////////////////////////
+let btnreadmore = document.getElementById("readmore");
+
+btnreadmore.addEventListener('click', () => {
+  document.getElementById("readmore").innerHTML =  "interesse. O site é um grande sucesso, a título de exemplo, o site foi aprovado pelo programa Google Adsense, que permite ganhar dinheiro através dos anúncios que o Google coloca no site, provando ser um site muito bem arquitetado."
+
+  document.querySelector('.read').classList.remove('off')
 })
+
+let btnseeless = document.querySelector('.read')
+
+btnseeless.addEventListener('click', () => {
+  document.getElementById("readmore").innerHTML =  "<span id='rm'>... Ver mais</span>"
+
+  document.querySelector('.read').classList.add('off')
+})
+
+
